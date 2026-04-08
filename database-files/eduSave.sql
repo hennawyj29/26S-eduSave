@@ -332,3 +332,36 @@ INSERT INTO Competitor_Listing (Biz_Id, Biz_Name, Disc_Amount, Redemption_Count,
 INSERT INTO Platform_Metrics (Biz_Id, Total_Users, Active_Discs, Pending_Rpts, Snapshot_Date) VALUES
   (1, 1250, 47, 3, '2026-03-15 00:00:00'),
   (1, 1280, 52, 1, '2026-03-22 00:00:00');
+
+
+
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Columbia University', 'Viana do Castelo', 'Viso', -34.5006776, -58.8072561);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('UCLA', 'Porto', 'Vilares', 41.3015266, -8.5820391);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('UCLA', null, 'Nakhon Luang', 14.4759803, 100.6241192);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Columbia University', 'Québec', 'Blainville', 45.7013243, -73.9284855);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('MIT', null, 'Nahura', -6.2291489, 106.8548083);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Northeastern University', null, 'Hongchang', 46.6380789, 126.9919589);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Northeastern University', null, 'Huangchi', 36.275231, 113.310158);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Columbia University', null, 'Hwado', 37.6523921, 127.3083224);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Harvard University', 'Ontario', 'Mississauga', 43.6368159, -79.7119419);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('UCLA', null, 'Llusco', -14.34823, -72.121559);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Northeastern University', null, 'Purbalingga', -7.3058578, 109.4259114);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Tufts University', null, 'Dueñas', 14.5008343, 121.0485932);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Boston University', 'Lisboa', 'Venda do Valador', 38.927978, -9.238643);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Tufts University', null, 'Ulaandel', 46.36446, 113.577);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Boston University', null, 'Balzan', 35.8965072, 14.4545529);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Harvard University', null, 'Dalongtan', 39.302809, 99.275837);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Boston University', null, 'Hernando', 35.20105, -91.8318333);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Harvard University', 'Provence-Alpes-Côte d''Azur', 'Toulon', 43.1283145, 5.9294606);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Columbia University', 'Québec', 'Saint-Ambroise', 48.5556837, -71.3205493);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Harvard University', 'Oslo', 'Oslo', 59.9278844, 10.7477822);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('NYU', null, 'Sanandaj', 35.3218748, 46.9861647);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Northeastern University', null, 'Nazaré', -6.3207152, -47.7834888);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('UCLA', null, 'Sanok', 49.5532749, 22.2110081);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Tufts University', null, 'Skalbmierz', 50.3197113, 20.3992492);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Northeastern University', null, 'Santa Rita', -25.7917136, -55.0879338);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Harvard University', null, 'Sampangbitung', -6.3514294, 105.9141793);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Harvard University', null, 'Libenge', 3.6489578, 18.6353764);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Harvard University', 'Nord-Pas-de-Calais', 'Arras', 50.2837307, 2.7425682);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('University of Michigan', null, 'Maní', 4.817986, -72.280702);
+insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Harvard University', null, 'Uusikaupunki', 60.8110019, 21.4457309);
