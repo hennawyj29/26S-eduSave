@@ -530,3 +530,72 @@ insert into Business_Owner (Owner_Id, Biz_Id, Uni_Id, Owner_Name, Owner_Email, O
 insert into Business_Owner (Owner_Id, Biz_Id, Uni_Id, Owner_Name, Owner_Email, Owner_Phone) values (33, 7, 25, 'Marji Shyres', 'mshyresw@feedburner.com', '318-814-3608');
 insert into Business_Owner (Owner_Id, Biz_Id, Uni_Id, Owner_Name, Owner_Email, Owner_Phone) values (34, 36, 89, 'Marji Littlepage', 'mlittlepagex@state.gov', '613-122-2669');
 insert into Business_Owner (Owner_Id, Biz_Id, Uni_Id, Owner_Name, Owner_Email, Owner_Phone) values (35, 97, 11, 'Heath Glasner', 'hglasnery@squidoo.com', '217-651-3057');
+
+
+-- Discounts 
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (1, 1, '20% Off Large Pizzas', 20, true, '1/10/2026', 'PIZZA20');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (2, 1, 'Buy 2 Get 1 Free Burgers', 33, true, '2/14/2026', null);
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (3, 1, 'Free Garlic Bread with Any Order', 0, false, '12/1/2025', 'GARLIC100');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (4, 2, '15% Off All Textbooks', 15, true, '1/15/2026', 'BOOKS15');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (5, 2, 'Student Meal Deal - $5 Off', 5, true, '2/1/2026', 'MEAL5');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (6, 3, '10% Off First Haircut', 10, true, '1/20/2026', 'FIRSTCUT10');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (7, 3, 'Half-Price Blowout Tuesdays', 50, true, '3/1/2026', 'BLOWOUT50');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (8, 4, '$20 Off Any Gym Membership', 20, true, '2/10/2026', 'GYM20');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (9, 4, 'Free Week Trial - Yoga Studio', 100, false, '11/15/2025', 'YOGAFREE');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (10, 5, '25% Off Vintage Tees', 25, true, '3/5/2026', 'TEES25');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (11, 5, 'Spend $50 Save $10', 10, true, '1/25/2026', null);
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (12, 6, '$15 Off Oil Change', 15, true, '2/20/2026', 'OIL15');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (13, 6, 'Free Tire Rotation with Service', 0, true, '3/10/2026', 'TIREFREE');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (14, 7, '30% Off All Smoothies', 30, true, '2/28/2026', 'SMOOTH30');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (15, 7, 'Buy 1 Juice Get 1 50% Off', 50, false, '12/20/2025', 'JUICE50');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (16, 8, '20% Off Movie Tickets Online', 20, true, '1/5/2026', 'MOVIE20');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (17, 8, 'Tuesday $5 Admission', 5, true, '3/15/2026', null);
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (18, 9, '$10 Off Print Orders Over $30', 10, true, '2/5/2026', 'PRINT10');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (19, 9, 'Free Lamination with Any Order', 0, false, '11/1/2025', 'LAMIFREE');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (20, 10, '40% Off Seasonal Menu Items', 40, true, '3/20/2026', 'SEASON40');
+
+
+-- Saved_Discount
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (1, 1, '3/1/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (2, 2, '3/5/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (3, 5, '1/7/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (4, 8, '1/14/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (5, 3, '1/19/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (6, 12, '1/23/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (7, 7, '1/26/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (8, 15, '2/1/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (9, 4, '2/10/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (10, 10, '2/11/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (11, 6, '2/15/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (12, 18, '2/19/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (13, 9, '2/20/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (14, 14, '2/25/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (15, 2, '2/27/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (16, 20, '3/1/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (17, 11, '3/9/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (18, 16, '3/12/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (19, 13, '3/18/2026');
+insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (20, 17, '3/28/2026');
+
+
+-- Shared_Discount
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (2, 1, 1, '3/2/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (1, 3, 2, '3/6/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (4, 2, 5, '1/8/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (3, 5, 8, '1/15/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (6, 4, 3, '2/1/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (5, 7, 12, '2/9/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (8, 6, 7, '2/14/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (7, 9, 15, '2/20/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (10, 8, 4, '2/25/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (9, 11, 10, '3/1/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (12, 10, 6, '3/5/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (11, 13, 18, '3/8/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (14, 12, 9, '3/11/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (13, 15, 14, '3/14/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (16, 14, 2, '3/17/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (15, 17, 20, '3/19/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (18, 16, 11, '3/21/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (17, 19, 16, '3/23/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (20, 18, 13, '3/26/2026');
+insert into Shared_Discount (Sender_Id, Receiver_Id, Discount_Id, Shared_At) values (19, 20, 17, '3/29/2026');
