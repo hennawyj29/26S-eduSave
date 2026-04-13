@@ -366,6 +366,70 @@ insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Harvar
 insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('University of Michigan', null, 'Maní', 4.817986, -72.280702);
 insert into University (Uni_Name, State, City, Uni_Lat, Uni_Lng) values ('Harvard University', null, 'Uusikaupunki', 60.8110019, 21.4457309);
 
+--- Category Data
+insert into Category (Category_Name) values ('Travel');
+insert into Category (Category_Name) values ('Books');
+insert into Category (Category_Name) values ('Sports');
+insert into Category (Category_Name) values ('Books');
+insert into Category (Category_Name) values ('Health');
+insert into Category (Category_Name) values ('Books');
+insert into Category (Category_Name) values ('Books');
+insert into Category (Category_Name) values ('Clothing');
+insert into Category (Category_Name) values ('Beauty');
+insert into Category (Category_Name) values ('Technology');
+insert into Category (Category_Name) values ('Food');
+insert into Category (Category_Name) values ('Clothing');
+insert into Category (Category_Name) values ('Electronics');
+insert into Category (Category_Name) values ('Sports');
+insert into Category (Category_Name) values ('Technology');
+insert into Category (Category_Name) values ('Technology');
+insert into Category (Category_Name) values ('Electronics');
+insert into Category (Category_Name) values ('Food');
+insert into Category (Category_Name) values ('Electronics');
+insert into Category (Category_Name) values ('Electronics');
+insert into Category (Category_Name) values ('Food');
+insert into Category (Category_Name) values ('Sports');
+insert into Category (Category_Name) values ('Sports');
+insert into Category (Category_Name) values ('Travel');
+insert into Category (Category_Name) values ('Sports');
+insert into Category (Category_Name) values ('Electronics');
+insert into Category (Category_Name) values ('Food');
+insert into Category (Category_Name) values ('Health');
+insert into Category (Category_Name) values ('Technology');
+insert into Category (Category_Name) values ('Entertainment');
+
+-- Admin Data 
+insert into Admin (Admin_Name, Admin_Role) values ('Addison Verdie', 'Data Analyst');
+insert into Admin (Admin_Name, Admin_Role) values ('Darline Scullard', 'Data Analyst');
+insert into Admin (Admin_Name, Admin_Role) values ('Flossi Brodeau', 'Data Analyst');
+insert into Admin (Admin_Name, Admin_Role) values ('Franzen Anfusso', 'Support Agent');
+insert into Admin (Admin_Name, Admin_Role) values ('Aguste Millen', 'Data Analyst');
+insert into Admin (Admin_Name, Admin_Role) values ('Yehudit McBain', 'Operations Manager');
+insert into Admin (Admin_Name, Admin_Role) values ('Cristie Kirrage', 'Support Agent');
+insert into Admin (Admin_Name, Admin_Role) values ('Hesther Lacasa', 'System Admin');
+insert into Admin (Admin_Name, Admin_Role) values ('Jeanie Pollastro', 'System Admin');
+insert into Admin (Admin_Name, Admin_Role) values ('Grove Clink', 'Content Moderator');
+insert into Admin (Admin_Name, Admin_Role) values ('Joeann Tockell', 'Content Moderator');
+insert into Admin (Admin_Name, Admin_Role) values ('Brandais McCaighey', 'Content Moderator');
+insert into Admin (Admin_Name, Admin_Role) values ('Coop Workman', 'Content Moderator');
+insert into Admin (Admin_Name, Admin_Role) values ('Toby MacDermot', 'Content Moderator');
+insert into Admin (Admin_Name, Admin_Role) values ('Ware Aronow', 'System Admin');
+insert into Admin (Admin_Name, Admin_Role) values ('Hedwiga Radolf', 'Data Analyst');
+insert into Admin (Admin_Name, Admin_Role) values ('Hestia Grishukhin', 'Operations Manager');
+insert into Admin (Admin_Name, Admin_Role) values ('Kym Kinnoch', 'Support Agent');
+insert into Admin (Admin_Name, Admin_Role) values ('Melinde Pelfer', 'Support Agent');
+insert into Admin (Admin_Name, Admin_Role) values ('Chicky Nurse', 'System Admin');
+insert into Admin (Admin_Name, Admin_Role) values ('Pauletta Bonhill', 'Content Moderator');
+insert into Admin (Admin_Name, Admin_Role) values ('Rosalinda Zum Felde', 'System Admin');
+insert into Admin (Admin_Name, Admin_Role) values ('Xever Breslin', 'Operations Manager');
+insert into Admin (Admin_Name, Admin_Role) values ('Lucie Figure', 'Support Agent');
+insert into Admin (Admin_Name, Admin_Role) values ('Paco Matveiko', 'Operations Manager');
+insert into Admin (Admin_Name, Admin_Role) values ('Lenette Berrisford', 'Content Moderator');
+insert into Admin (Admin_Name, Admin_Role) values ('Lynette Aldersley', 'Data Analyst');
+insert into Admin (Admin_Name, Admin_Role) values ('Erich Sandal', 'System Admin');
+insert into Admin (Admin_Name, Admin_Role) values ('Melicent Bryning', 'Support Agent');
+insert into Admin (Admin_Name, Admin_Role) values ('Herold Crankshaw', 'System Admin');
+
 -- Business Data
 insert into Business (Biz_id, Biz_name, Website, Address, Owner_Name, Owner_Email, Owner_Phone) values (1, 'Oyoba', 'https://walmart.com/elit/ac/nulla.json?varius=pellentesque&nulla=volutpat&facilisi=dui&cras=maecenas&non=tristique&velit=est&nec=et&nisi=tempus&vulputate=semper&nonummy=est&maecenas=quam&tincidunt=pharetra&lacus=magna&at=ac&velit=consequat&vivamus=metus&vel=sapien&nulla=ut&eget=nunc&eros=vestibulum&elementum=ante&pellentesque=ipsum&quisque=primis&porta=in&volutpat=faucibus&erat=orci&quisque=luctus&erat=et&eros=ultrices&viverra=posuere&eget=cubilia&congue=curae&eget=mauris&semper=viverra&rutrum=diam&nulla=vitae&nunc=quam&purus=suspendisse&phasellus=potenti&in=nullam&felis=porttitor&donec=lacus&semper=at&sapien=turpis&a=donec&libero=posuere', 'Room 697', 'Bellanca', 'bcowles0@howstuffworks.com', '878-244-9715');
 insert into Business (Biz_id, Biz_name, Website, Address, Owner_Name, Owner_Email, Owner_Phone) values (2, 'Camido', 'https://scientificamerican.com/semper/sapien/a/libero.png?at=eget&velit=congue&vivamus=eget&vel=semper&nulla=rutrum&eget=nulla&eros=nunc&elementum=purus&pellentesque=phasellus&quisque=in&porta=felis&volutpat=donec&erat=semper&quisque=sapien&erat=a&eros=libero&viverra=nam&eget=dui&congue=proin&eget=leo&semper=odio&rutrum=porttitor&nulla=id&nunc=consequat&purus=in&phasellus=consequat&in=ut&felis=nulla&donec=sed&semper=accumsan&sapien=felis&a=ut&libero=at&nam=dolor&dui=quis&proin=odio&leo=consequat&odio=varius&porttitor=integer&id=ac&consequat=leo&in=pellentesque&consequat=ultrices&ut=mattis&nulla=odio&sed=donec&accumsan=vitae&felis=nisi&ut=nam', 'Apt 1831', 'Ware', 'wdeferrari1@vinaora.com', '400-811-1008');
