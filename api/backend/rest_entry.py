@@ -7,6 +7,12 @@ from backend.db_connection import init_app as init_db
 from backend.simple.simple_routes import simple_routes
 from backend.ngos.ngo_routes import ngos
 
+# adding in the imports for four blueprints
+from backend.students.students import students
+from backend.businesses.businesses import businesses
+from backend.discounts.discounts import discounts
+from backend.admin.admin import admin
+
 
 def create_app():
     app = Flask(__name__)
@@ -37,5 +43,11 @@ def create_app():
     app.logger.info("create_app(): registering blueprints")
     app.register_blueprint(simple_routes)
     app.register_blueprint(ngos, url_prefix="/ngo")
+
+    # Registering the blueprints for the four user types
+    app.register_blueprint(students,   url_prefix='/s')
+    app.register_blueprint(businesses, url_prefix='/b')
+    app.register_blueprint(discounts,  url_prefix='/d')
+    app.register_blueprint(admin,      url_prefix='/a')
 
     return app
