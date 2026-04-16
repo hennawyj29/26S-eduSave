@@ -2,8 +2,41 @@ from flask import Blueprint, jsonify, request, current_app
 from backend.db_connection import get_db
 from mysql.connector import Error
 
-# Create a Blueprint for NGO routes
-ngos = Blueprint("ngos", __name__)
+# Create a Blueprint for admin routes
+admin = Blueprint('admin', __name__)
+
+# Update a business account (approve/revoke ability to post listings)
+# Example: PUT /a/businesses/1
+@admin.route('/businesses/<int:id>', methods=['PUT'])
+def update_business(id):
+    cursor = get_db().cursor(dictionary=True)
+    try:
+        current_app.logger.info(f'PUT /a/businesses/{id}')
+        data = request.get_json()
+
+        cursor.execute("SELECT id FROM Businesses WHERE id = %s", (id,))
+        if not cursor.fetchone():
+            return jsonify({"error": "Business not found"}), 404
+
+        allowed_fields = ["name", "status", "is_approved"]
+        update_fields = [f"{f} = %s" for f in allowed_fields if f in data]
+        params = [data[f] for f in allowed_fields if f in data]
+
+        if not update_fields:
+            return jsonify({"error": "No valid fields to update"}), 400
+
+        params.append(id)
+        query = f"UPDATE Businesses SET {', '.join(update_fields)} WHERE id = %s"
+        cursor.execute(query, params)
+        get_db().commit()
+
+        return jsonify({"message": "Business updated successfully"}), 200
+    except Error as e:
+        current_app.logger.error(f'Database error in update_business: {e}')
+        return jsonify({"error": str(e)}), 500
+    finally:
+        cursor.close()
+
 
 
 # Get all NGOs with optional filtering by country, focus area, and founding year
