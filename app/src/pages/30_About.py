@@ -9,12 +9,14 @@ st.write("# About this App")
 
 st.markdown(
     """
-    This is a demo app for Data and Software in International Government and Politics Dialogue 2025 Project Course.  
+    This is a demo app for EduSave! A student-focused app for disocunts all over the country. 
 
-    The goal of this demo is to provide information on the tech stack 
-    being used as well as demo some of the features of the various platforms. 
+    The goal of this demo is to provide information on all of the recent dicounts and  
+    deals avaliable for college students across the United States. With search features, 
+    location services and more, EduSave is commited to providng students with an easy to use
+    platform to promote healthy spending habits.
 
-    Stay tuned for more information and features to come!
+    From California to Boston, we have deals for everyone!
     """
 )
 
