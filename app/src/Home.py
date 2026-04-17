@@ -70,3 +70,50 @@ if st.button('Act as System Administrator',
     st.session_state['role'] = 'administrator'
     st.session_state['first_name'] = 'SysAdmin'
     st.switch_page('pages/20_Admin_Home.py')
+
+# STARTING IMPLEMENTATION HERE:
+
+logger.info("Loading the Home page of the app")
+
+st.title('edU Save')
+st.write('#### Hi! As which user would you like to log in?')
+
+# ------- Persona 1: Benito Fernandez Student (international student browser) -------
+if st.button("Act as Benito Fernandez, a College Student",
+             type='primary',
+             use_container_width=True):
+    st.session_state['authenticated'] = True
+    st.session_state['role'] = 'student'
+    st.session_state['first_name'] = 'Benito'
+    logger.info("Logging in as Student Persona")
+    st.switch_page('pages/00_Student_Home.py')
+
+# ------- Persona 2: Mark Smith, Student (deal seeker) -------
+if st.button("Act as Mark Smith, a Deal-Seeking Student",
+             type='primary',
+             use_container_width=True):
+    st.session_state['authenticated'] = True
+    st.session_state['role'] = 'deal_seeker'
+    st.session_state['first_name'] = 'Mark'
+    logger.info("Logging in as Deal Seeker Persona")
+    st.switch_page('pages/10_Student2_Home.py')
+
+# ------- Persona 3: Sofia Reyes (Business Owner) -------
+if st.button("Act as Sofia Reyes, a Business Owner",
+             type='primary',
+             use_container_width=True):
+    st.session_state['authenticated'] = True
+    st.session_state['role'] = 'business_owner'
+    st.session_state['first_name'] = 'Sofia'
+    logger.info("Logging in as Business Owner Persona")
+    st.switch_page('pages/20_Sophia_Home.py')
+
+# ------- Persona 4: Jake Mallory (Admin) -------
+if st.button("Act as Jake Mallory, a Platform Administrator",
+             type='primary',
+             use_container_width=True):
+    st.session_state['authenticated'] = True
+    st.session_state['role'] = 'administrator'
+    st.session_state['first_name'] = 'Jake'
+    logger.info("Logging in as Administrator Persona")
+    st.switch_page('pages/30_Jake_Home.py')
