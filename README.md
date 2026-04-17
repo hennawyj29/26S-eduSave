@@ -133,3 +133,35 @@ _Note_: This project only contains the infrastructure for a hypothetical ML mode
    - We've put a sample (read _fake_) ML model in the `model01.py` file. The `predict` function will be called by the Flask REST API to perform '_real-time_' prediction based on model parameter values that are stored in the database. **Important**: you would never want to hard code the model parameter weights directly in the prediction function.
 1. The prediction route for the REST API is in `api/backend/simple/simple_routes.py`. Basically, it accepts two URL parameters and passes them to the `prediction` function in the `ml_models` module. The `prediction` route/function packages up the value(s) it receives from the model's `predict` function and sends it back to Streamlit as JSON.
 1. Back in Streamlit, check out `app/src/pages/11_Prediction.py`. Here, two numeric input fields are created. When the button is pressed, it makes a request to the REST API at `/prediction/{var_01}/{var_02}` and passes the values from the two inputs as URL path parameters. It gets back the results from the route and displays them.
+
+# README For edU Save
+**edU Save is a student discount platform that connects college students to deals both locally and online. Students can search, save and even share discounts as per category or location. Business owners can use this platform to manage listings and look through their performance analytics. Admins can verify discounts, attending to any reports.
+
+---
+## Created by (Team Members):
+- [Syesha Sen]
+- [Laasya Gattu]
+- [Julienne Conlee]
+- [Jacy Hennawy]
+- [Vedant Swarup]
+
+---
+## Demo Video
+[xxx]
+
+---
+## Structure Of Project (Files)
+```
+├── api/                  # Flask REST API
+│   └── backend/
+│       ├── students/     # Student routes blueprint
+│       ├── businesses/   # Business owner routes blueprint
+│       ├── discounts/    # Discount management blueprint
+│       └── admin/        # Admin routes blueprint
+├── app/                  # Streamlit frontend
+│   └── src/
+│       ├── Home.py       # Landing page
+│       ├── pages/        # All persona pages
+│       └── modules/      # Shared nav/utilities
+└── database-files/       # SQL schema and mock data
+```
