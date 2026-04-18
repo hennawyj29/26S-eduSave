@@ -23,15 +23,18 @@ def student_home_nav():
     )
 
 
-def world_bank_viz_nav():
+def restaurant_deal_nav():
     st.sidebar.page_link(
-        "pages/01_World_Bank_Viz.py", label="World Bank Visualization", icon="🏦"
+        "pages/01_Restaurant_Deal.py", label="Restaurant Deals", icon="🍽️"
     )
 
 
-def map_demo_nav():
-    st.sidebar.page_link("pages/02_Map_Demo.py", label="Map Demonstration", icon="🗺️")
+def clothing_deals_nav():
+    st.sidebar.page_link("pages/02_Clothing_Deals.py", label="Clothing Deals", icon="👕")
 
+
+def my_deals_nav():
+    st.sidebar.page_link("pages/03_My_Deals.py", label="My Deals", icon="🔖")
 
 # ---- Role: usaid_worker -----------------------------------------------------
 
