@@ -10,8 +10,6 @@ SideBarLinks()
 
 BASE_URL = "http://localhost:4000"
 
-st.title("Discount Catalog")
-
 # sidebar filters
 st.sidebar.subheader("Filters")
 
@@ -31,9 +29,11 @@ except Exception:
     cat_name_to_id = {}
     category_options = ["All", "Food", "Clothing", "Electronics", "Sports", "Books", "Health", "Travel"]
 
-selected_category = st.sidebar.selectbox("Category", category_options)
+default_idx = category_options.index("Sports") if "Sports" in category_options else 0
+selected_category = st.sidebar.selectbox("Category", category_options, index=default_idx)
 sort = st.sidebar.selectbox("Sort by discount", ["Highest first", "Lowest first"])
 
+st.title(f"{selected_category} Discount Catalog")
 
 # fetch discounts
 params = {}
