@@ -12,22 +12,17 @@ SideBarLinks()
 st.title(f"Welcome Deal-Seeking College Student Athlete, {st.session_state['first_name']}.")
 st.write('### What would you like to do today?')
 
-if st.button('Browse All Discounts',
+if st.button('Browse and Filter All Discounts',
              type='primary',
              use_container_width=True):
-    st.switch_page('pages/11_World_Bank_Viz.py')
+    st.switch_page('pages/11_Discount_Catalog.py')
 
-if st.button('Search Discounts by Category',
+if st.button('Browse All Discounts by Location',
              type='primary',
              use_container_width=True):
-    st.switch_page('pages/12_World_Bank_Viz.py')
-
-if st.button('Search Discounts Nearby',
-             type='primary',
-             use_container_width=True):
-    st.switch_page('pages/13_Map_Demo.py')
+    st.switch_page('pages/12_Discount_Map.py')
 
 if st.button('My Favorite Stores',
              type='primary',
              use_container_width=True):
-    st.switch_page('pages/14_Map_Demo.py')
+    st.switch_page('pages/13_Favorites.py')

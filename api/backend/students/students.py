@@ -19,7 +19,7 @@ def get_discounts():
 
         query = """
             SELECT d.Discount_Id, d.Disc_Title, d.Disc_Amount, d.Promo_Code,
-                d.Created_At, c.Category_Name, b.Biz_Name, b.Address
+                d.Created_At, c.Category_Name, b.Biz_Name, b.Address, b.Biz_Lat, b.Biz_Lng
             FROM Discount d
             JOIN Business b ON d.Biz_Id = b.Biz_Id
             JOIN Category c ON d.Category_Id = c.Category_Id
@@ -195,6 +195,25 @@ def send_notification():
         return jsonify({"message": "Notification sent successfully", "notif_id": cursor.lastrowid}), 201
     except Error as e:
         current_app.logger.error(f'Database error in send_notification: {e}')
+        return jsonify({"error": str(e)}), 500
+    finally:
+        cursor.close()
+
+
+# GET /s/universities - Return all universities with coordinates 
+# User stories: [2.1]
+@students.route("/universities", methods=["GET"])
+def get_universities():
+    cursor = get_db().cursor(dictionary=True)
+    try:
+        cursor.execute("""
+            SELECT Uni_Id, Uni_Name, Uni_Lat, Uni_Lng
+            FROM University
+            WHERE Uni_Lat IS NOT NULL AND Uni_Lng IS NOT NULL
+            ORDER BY Uni_Name
+        """)
+        return jsonify(cursor.fetchall()), 200
+    except Error as e:
         return jsonify({"error": str(e)}), 500
     finally:
         cursor.close()

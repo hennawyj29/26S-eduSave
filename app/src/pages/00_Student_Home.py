@@ -12,17 +12,17 @@ SideBarLinks()
 st.title(f"Welcome International College Student, {st.session_state['first_name']}.")
 st.write('### What would you like to do today?')
 
-if st.button('Grocery Discount Search',
+if st.button('Restaurant Discount Search',
              type='primary',
              use_container_width=True):
-    st.switch_page('pages/01_World_Bank_Viz.py')
+    st.switch_page('pages/01_Restaurant_Deals.py')
 
 if st.button('Clothing Discount Search ',
              type='primary',
              use_container_width=True):
-    st.switch_page('pages/01_World_Bank_Viz.py')
+    st.switch_page('pages/02_Clothing_Deals.py')
 
 if st.button('My Deals',
              type='primary',
              use_container_width=True):
-    st.switch_page('pages/02_Map_Demo.py')
+    st.switch_page('pages/03_My_Deals.py')

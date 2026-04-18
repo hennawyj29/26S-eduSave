@@ -163,3 +163,16 @@ def delete_discount(disc_id):
         return jsonify({"error": str(e)}), 500
     finally:
         cursor.close()
+
+
+# GET /d/categories - Return all unique categories
+@discounts.route("/categories", methods=["GET"])
+def get_categories():
+    cursor = get_db().cursor(dictionary=True)
+    try:
+        cursor.execute("SELECT DISTINCT Category_Id, Category_Name FROM Category ORDER BY Category_Name")
+        return jsonify(cursor.fetchall()), 200
+    except Error as e:
+        return jsonify({"error": str(e)}), 500
+    finally:
+        cursor.close()
