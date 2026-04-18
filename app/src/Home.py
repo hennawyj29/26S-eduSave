@@ -79,7 +79,7 @@ st.title('edU Save')
 st.write('#### Hi! As which user would you like to log in?')
 
 # ------- Persona 1: Benito Fernandez Student (international student browser) -------
-if st.button("Act as Benito Fernandez, a College Student",
+if st.button("Act as Benito Fernandez, an International College Student",
              type='primary',
              use_container_width=True):
     st.session_state['authenticated'] = True
@@ -89,7 +89,7 @@ if st.button("Act as Benito Fernandez, a College Student",
     st.switch_page('pages/00_Student_Home.py')
 
 # ------- Persona 2: Mark Smith, Student (deal seeker) -------
-if st.button("Act as Mark Smith, a Deal-Seeking Student",
+if st.button("Act as Mark Smith, a Deal-Seeking College Student Athlete",
              type='primary',
              use_container_width=True):
     st.session_state['authenticated'] = True

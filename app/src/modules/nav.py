@@ -15,11 +15,11 @@ def about_page_nav():
     st.sidebar.page_link("pages/30_About.py", label="About", icon="🧠")
 
 
-# ---- Role: pol_strat_advisor ------------------------------------------------
+# ---- Role: International Student: Benito ------------------------------------------------
 
-def pol_strat_home_nav():
+def student_home_nav():
     st.sidebar.page_link(
-        "pages/00_Pol_Strat_Home.py", label="Political Strategist Home", icon="👤"
+        "pages/00_Student_Home.py", label="International College Student Home", icon="👤"
     )
 
 
