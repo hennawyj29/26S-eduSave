@@ -383,7 +383,6 @@ insert into Category (Category_Name) values ('Technology');
 insert into Category (Category_Name) values ('Food');
 insert into Category (Category_Name) values ('Clothing');
 insert into Category (Category_Name) values ('Electronics');
-insert into Category (Category_Name) values ('Sports');
 insert into Category (Category_Name) values ('Technology');
 insert into Category (Category_Name) values ('Technology');
 insert into Category (Category_Name) values ('Electronics');
@@ -391,10 +390,7 @@ insert into Category (Category_Name) values ('Food');
 insert into Category (Category_Name) values ('Electronics');
 insert into Category (Category_Name) values ('Electronics');
 insert into Category (Category_Name) values ('Food');
-insert into Category (Category_Name) values ('Sports');
-insert into Category (Category_Name) values ('Sports');
 insert into Category (Category_Name) values ('Travel');
-insert into Category (Category_Name) values ('Sports');
 insert into Category (Category_Name) values ('Electronics');
 insert into Category (Category_Name) values ('Food');
 insert into Category (Category_Name) values ('Health');
@@ -474,6 +470,11 @@ insert into Business (Biz_Name, Website, Address, Account_Status, Joined_Date, V
 insert into Business (Biz_Name, Website, Address, Account_Status, Joined_Date, Verified_Status, Biz_Lat, Biz_Lng) values ('Cozy Ramen House', 'www.cozyramentacoma.com', '1500 Pacific Ave, Tacoma, WA 98402', 1, '2024-08-28 12:00:00', true, 47.2529, -122.4443);
 insert into Business (Biz_Name, Website, Address, Account_Status, Joined_Date, Verified_Status, Biz_Lat, Biz_Lng) values ('Acai & Co.', 'www.acaiandco.com', '1300 SW 1st St, Miami, FL 33135', 1, '2024-09-16 09:00:00', true, 25.7617, -80.1918);
 insert into Business (Biz_Name, Website, Address, Account_Status, Joined_Date, Verified_Status, Biz_Lat, Biz_Lng) values ('The Photo Booth Studio', 'www.photboothstudio.com', '2100 Hillsborough St, Raleigh, NC 27607', 0, '2024-03-22 14:30:00', false, 36.0014, -78.9382);
+insert into Business (Biz_Name, Website, Address, Account_Status, Joined_Date, Verified_Status, Biz_Lat, Biz_Lng) values ('SoCal Sports', 'www.socalsports.com', '825 S Figueroa St, Los Angeles, CA 90017', 1, '2025-03-10 09:00:00', true, 34.0443, -118.2598);
+insert into Business (Biz_Name, Website, Address, Account_Status, Joined_Date, Verified_Status, Biz_Lat, Biz_Lng) values ('Bruin Athletics Supply', 'www.bruinathletics.com', '1065 Gayley Ave, Los Angeles, CA 90024', 1, '2025-04-15 10:00:00', true, 34.0617, -118.4488);
+insert into Business (Biz_Name, Website, Address, Account_Status, Joined_Date, Verified_Status, Biz_Lat, Biz_Lng) values ('Trojan Fitness Gear', 'www.trojanfitness.com', '3210 S Hoover St, Los Angeles, CA 90089', 1, '2025-05-20 11:00:00', true, 34.0195, -118.2854);
+insert into Business (Biz_Name, Website, Address, Account_Status, Joined_Date, Verified_Status, Biz_Lat, Biz_Lng) values ('Venice Beach Sports Co.', 'www.venicebeachsports.com', '1800 Ocean Front Walk, Venice, CA 90291', 1, '2025-06-01 08:30:00', true, 33.9850, -118.4695);
+insert into Business (Biz_Name, Website, Address, Account_Status, Joined_Date, Verified_Status, Biz_Lat, Biz_Lng) values ('LA Campus Rec', 'www.lacampusrec.com', '555 N Vermont Ave, Los Angeles, CA 90004', 1, '2025-07-12 09:30:00', false, 34.0785, -118.2901);
 
 -- Student Data
 insert into Student (Uni_Id, First_Name, Last_Name, Username, Student_Email, Student_Type, Grad_Year, Verified_Status) values (1, 'Arjun', 'Patel', 'arjun_p', 'patel.arj@northeastern.edu', 'International', 2027, 1);
@@ -595,7 +596,26 @@ insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status,
 insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (38, 8, '15% Off Mini Golf for Groups', 15, true, '2026-03-11 11:00:00', 'GOLF15');
 insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (39, 9, '$20 Off Custom T-Shirt Orders', 20, true, '2026-03-16 14:00:00', 'SHIRT20');
 insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (40, 10, '10% Off Brunch Menu', 10, true, '2026-03-22 10:00:00', 'BRUNCH10');
-
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (2, 6, '20% Off All Sporting Goods', 20, true, '2026-01-05 09:00:00', 'SPORT20');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (6, 6, '15% Off Yoga Mats and Gear', 15, true, '2026-01-12 10:00:00', 'YOGA15');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (7, 6, 'Free Water Bottle with $40 Purchase', 0, true, '2026-01-18 11:00:00', 'BOTTLE0');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (2, 6, '10% Off Rock Climbing Gear', 10, true, '2026-01-25 08:30:00', 'CLIMB10');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (6, 6, '25% Off Student Surf Rentals', 25, true, '2026-02-01 09:00:00', 'SURF25');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (7, 6, '$10 Off Skateboard Decks', 10, true, '2026-02-08 13:00:00', 'SKATE10');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (2, 6, '30% Off Running Shoes', 30, false, '2026-02-15 10:30:00', 'RUN30');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (6, 6, 'Buy 1 Get 1 50% Off Tennis Balls', 50, true, '2026-02-22 11:00:00', 'TENNIS50');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (7, 6, '20% Off Gym Bags and Backpacks', 20, true, '2026-03-01 08:00:00', 'GYMBAG20');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (2, 6, 'Free Fitness Class with Equipment Purchase', 0, true, '2026-03-10 09:30:00', 'FITCLASS0');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (41, 6, '20% Off All Sporting Goods', 20, true, '2026-01-05 09:00:00', 'SPORT20');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (42, 6, '15% Off Yoga Mats and Gear', 15, true, '2026-01-12 10:00:00', 'YOGA15');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (43, 6, 'Free Water Bottle with $40 Purchase', 0, true, '2026-01-18 11:00:00', 'BOTTLE0');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (44, 6, '25% Off Student Surf Rentals', 25, true, '2026-02-01 09:00:00', 'SURF25');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (45, 6, '$10 Off Skateboard Decks', 10, true, '2026-02-08 13:00:00', 'SKATE10');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (41, 6, '30% Off Running Shoes', 30, false, '2026-02-15 10:30:00', 'RUN30');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (42, 6, 'Buy 1 Get 1 50% Off Tennis Balls', 50, true, '2026-02-22 11:00:00', 'TENNIS50');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (43, 6, '20% Off Gym Bags and Backpacks', 20, true, '2026-03-01 08:00:00', 'GYMBAG20');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (44, 6, '10% Off Rock Climbing Gear', 10, true, '2026-03-08 09:00:00', 'CLIMB10');
+insert into Discount (Biz_Id, Category_Id, Disc_Title, Disc_Amount, Disc_Status, Created_At, Promo_Code) values (45, 6, 'Free Fitness Class with Equipment Purchase', 0, true, '2026-03-10 09:30:00', 'FITCLASS0');
 
 -- Saved_Discount
 insert into Saved_Discount (Student_Id, Discount_Id, Saved_At) values (1, 1, '2026-03-01 15:00:00');
