@@ -68,15 +68,26 @@ def classification_nav():
     )
 
 
-# ---- Role: administrator ----------------------------------------------------
+# ---- Role: Business Owner: Sofia ----------------------------------------------------
 
-def admin_home_nav():
-    st.sidebar.page_link("pages/20_Admin_Home.py", label="System Admin", icon="🖥️")
-
-
-def ml_model_mgmt_nav():
+def business_owner_home_nav():
     st.sidebar.page_link(
-        "pages/21_ML_Model_Mgmt.py", label="ML Model Management", icon="🏢"
+        "pages/20_Sophia_Home.py", label="Business Owner Home", icon="🏪"
+    )
+
+def listing_analytics_nav():
+    st.sidebar.page_link(
+        "pages/21_Listing_Analytics.py", label="Listing Analytics", icon="📊"
+    )
+
+def competitor_listings_nav():
+    st.sidebar.page_link(
+        "pages/22_Competitor_Listings.py", label="Competitor Listings", icon="🏆"
+    )
+
+def manage_discounts_nav():
+    st.sidebar.page_link(
+        "pages/23_Manage_Discounts.py", label="Manage Discounts", icon="✏️"
     )
 
 
@@ -118,6 +129,12 @@ def SideBarLinks(show_home=False):
         if st.session_state["role"] == "administrator":
             admin_home_nav()
             ml_model_mgmt_nav()
+
+        if st.session_state["role"] == "business_owner":
+            business_owner_home_nav()
+            listing_analytics_nav()
+            competitor_listings_nav()
+            manage_discounts_nav()
 
     # About link appears at the bottom for all roles
     about_page_nav()
