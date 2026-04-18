@@ -5,9 +5,11 @@ logger = logging.getLogger(__name__)
 from modules.nav import SideBarLinks
 SideBarLinks()
 
-BASE_URL = "http://localhost:4000"
 
 st.title("Verify Discounts")
+
+first = st.session_state.get('first_name', 'there')
+st.write(f"### Hi {first}! Verify and mark any discounts as expired.")
 
 # student ID input
 student_id = st.number_input("Student ID", min_value=1, step=1)
@@ -15,7 +17,7 @@ student_id = st.number_input("Student ID", min_value=1, step=1)
 
 # fetch all active discounts
 try:
-    res = requests.get(f"{BASE_URL}/s/discounts")
+    res = requests.get("http://api:4000/s/discounts")
     res.raise_for_status()
     discounts = res.json()
 except Exception as e:

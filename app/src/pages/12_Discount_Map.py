@@ -8,7 +8,6 @@ logger = logging.getLogger(__name__)
 from modules.nav import SideBarLinks
 SideBarLinks()
 
-BASE_URL = "http://localhost:4000"
 
 # calculation of latitudes and longitudes for location on earth
 def calc_lat_lon(lat1, lng1, lat2, lng2):
@@ -22,7 +21,7 @@ def calc_lat_lon(lat1, lng1, lat2, lng2):
 
 # fetch universities for dropdown
 try:
-    uni_res = requests.get(f"{BASE_URL}/s/universities")
+    uni_res = requests.get("http://api:4000/s/universities")
     uni_res.raise_for_status()
     uni_data = uni_res.json()
     uni_options = {u["Uni_Name"]: (u["Uni_Lat"], u["Uni_Lng"]) for u in uni_data if u.get("Uni_Lat") and u.get("Uni_Lng")}
@@ -44,11 +43,14 @@ radius = st.sidebar.slider("Radius (km)", 1, 50, 10, disabled=(selected_uni == "
 
 st.title(f"{selected_uni} Discount Map")
 
+first = st.session_state.get('first_name', 'there')
+st.write(f"### Hi {first}! Browse local discounts near you.")
+
 # fetch discounts
 params = {}
 
 try:
-    res = requests.get(f"{BASE_URL}/s/discounts", params=params)
+    res = requests.get("http://api:4000/s/discounts", params=params)
     res.raise_for_status()
     discounts = res.json()
 except Exception as e:

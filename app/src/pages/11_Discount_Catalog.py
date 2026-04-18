@@ -8,13 +8,12 @@ logger = logging.getLogger(__name__)
 from modules.nav import SideBarLinks
 SideBarLinks()
 
-BASE_URL = "http://localhost:4000"
 
 # sidebar filters
 st.sidebar.subheader("Filters")
 
 try:
-    cat_res = requests.get(f"{BASE_URL}/s/discounts/categories")
+    cat_res = requests.get("http://api:4000/s/discounts/categories")
     cat_res.raise_for_status()
     cat_data = cat_res.json()
     seen = set()
@@ -35,13 +34,16 @@ sort = st.sidebar.selectbox("Sort by discount", ["Highest first", "Lowest first"
 
 st.title(f"{selected_category} Discount Catalog")
 
+first = st.session_state.get('first_name', 'there')
+st.write(f"### Hi {first}! Browse and sort discounts by category and amount.")
+
 # fetch discounts
 params = {}
 if selected_category != "All" and selected_category in cat_name_to_id:
     params["category_id"] = cat_name_to_id[selected_category]
 
 try:
-    res = requests.get(f"{BASE_URL}/s/discounts", params=params)
+    res = requests.get("http://api:4000/s/discounts", params=params)
     res.raise_for_status()
     discounts = res.json()
 except Exception as e:
