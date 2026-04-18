@@ -165,3 +165,34 @@ _Note_: This project only contains the infrastructure for a hypothetical ML mode
 │       └── modules/      # Shared nav/utilities
 └── database-files/       # SQL schema and mock data
 ```
+## User Personas used for app:
+| Persona | Role | Description |
+|---|---|---|
+| Benito Fernandez | International Student | Browses discounts using categories, gets notifications on deals, and saves deals |
+| Mark Smith | College Student (Athlete) | Filters deals using location and price, and shares discounts with friends |
+| Sofia Reyes | Business Owner | Creates and looks through discounts, looks at business analytics |
+| Jake Mallory | Admin | Approves discounts, looks through businesses, looks at metrics of platform |
+
+## To Setup
+### 1. Clone Repo
+```bash
+git clone https://github.com/hennawyj29/26S-eduSave.git
+```
+
+### 2. Create the '.env' File
+```
+SECRET_KEY=<edUSaveKey>
+DB_USER=root
+DB_HOST=db
+DB_PORT=3306
+DB_NAME=edusave
+MYSQL_ROOT_PASSWORD=<edUSavePassword>
+```
+
+### 3. Start Docker Containers
+
+### 4. Go to App
+Type into browser:
+```
+http://localhost:8501
+```
