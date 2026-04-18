@@ -17,12 +17,12 @@ if st.button('Browse and Filter All Discounts',
              use_container_width=True):
     st.switch_page('pages/11_Discount_Catalog.py')
 
-if st.button('Browse All Discounts by Location',
+if st.button('Browse All Discounts Nearby',
              type='primary',
              use_container_width=True):
     st.switch_page('pages/12_Discount_Map.py')
 
-if st.button('My Favorite Stores',
+if st.button('Verify Discounts',
              type='primary',
              use_container_width=True):
-    st.switch_page('pages/13_Favorites.py')
+    st.switch_page('pages/13_Verify_Discs.py')

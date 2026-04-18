@@ -166,6 +166,7 @@ def delete_discount(disc_id):
 
 
 # GET /d/categories - Return all unique categories
+# User stories: [2.3]
 @discounts.route("/categories", methods=["GET"])
 def get_categories():
     cursor = get_db().cursor(dictionary=True)

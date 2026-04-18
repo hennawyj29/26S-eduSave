@@ -18,8 +18,7 @@ def calc_lat_lon(lat1, lng1, lat2, lng2):
     a = math.sin(d_lat/2)**2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(d_lng/2)**2
     return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
 
-# main page
-st.title("Discount Map")
+
 
 # fetch universities for dropdown
 try:
@@ -38,9 +37,12 @@ except Exception:
 # sidebar filters
 st.sidebar.subheader("Filters")
 
-selected_uni = st.sidebar.selectbox("University", ["All"] + list(uni_options.keys()))
+default_uni = next((name for name in uni_options if "USC" in name), list(uni_options.keys())[0])
+selected_uni = st.sidebar.selectbox("University", list(uni_options.keys()), index=list(uni_options.keys()).index(default_uni))
+
 radius = st.sidebar.slider("Radius (km)", 1, 50, 10, disabled=(selected_uni == "All"))
 
+st.title(f"{selected_uni} Discount Map")
 
 # fetch discounts
 params = {}
