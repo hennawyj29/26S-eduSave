@@ -121,13 +121,12 @@ def SideBarLinks(show_home=False):
             world_bank_viz_nav()
             map_demo_nav()
 
-        if st.session_state["role"] == "usaid_worker":
-            usaid_worker_home_nav()
-            ngo_directory_nav()
-            add_ngo_nav()
-            prediction_nav()
-            api_test_nav()
-            classification_nav()
+        if st.session_state["role"] == "student athlete":
+            student2_home_nav()
+            discount_catalog_nav()
+            discount_map_nav()
+            verify_discs_nav()
+
 
         if st.session_state["role"] == "administrator":
             jake_home_nav()
