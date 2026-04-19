@@ -85,14 +85,13 @@ if st.sidebar.checkbox("Show map", value=True):
 
 
 # discount table
-if active:
-    rows = [{
-        "Business": d.get("Biz_Name"),
-        "Discount":  f"{d.get('Disc_Amount')}% off",
-        "Title":     d.get("Disc_Title"),
-        "Category":  d.get("Category_Name"),
-        "Promo":     d.get("Promo_Code") or "—",
-    } for d in active]
-    st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
-else:
+if not active:
     st.info("No discounts match your filters.")
+else:
+    for deal in active:
+        with st.container(border=True):
+            st.subheader(deal.get("Disc_Title", "Untitled"))
+            st.caption(f"{deal.get('Biz_Name', 'Unknown')} · {deal.get('Category_Name', '')}")
+            st.write(f"**{deal.get('Disc_Amount', 0)}% off**")
+            if deal.get("Promo_Code"):
+                st.write(f"Promo code: `{deal.get('Promo_Code')}`")
