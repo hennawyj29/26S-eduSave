@@ -6,6 +6,7 @@ import math
 import logging
 logger = logging.getLogger(__name__)
 from modules.nav import SideBarLinks
+st.set_page_config(layout='wide', page_title="Discount Location Map")
 SideBarLinks()
 
 

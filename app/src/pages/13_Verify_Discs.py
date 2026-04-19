@@ -5,7 +5,7 @@ logger = logging.getLogger(__name__)
 from modules.nav import SideBarLinks
 SideBarLinks()
 
-
+st.set_page_config(layout='wide', page_title="Verifying Discounts")
 st.title("Verify Discounts")
 
 first = st.session_state.get('first_name', 'there')
