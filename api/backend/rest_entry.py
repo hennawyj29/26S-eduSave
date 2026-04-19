@@ -38,12 +38,6 @@ def create_app():
     app.logger.info("create_app(): initializing database connection")
     init_db(app)
 
-    # Register the routes from each Blueprint with the app object
-    # and give a url prefix to each.
-    app.logger.info("create_app(): registering blueprints")
-    app.register_blueprint(simple_routes)
-    app.register_blueprint(ngos, url_prefix="/ngo")
-
     # Registering the blueprints for the four user types
     app.register_blueprint(students,   url_prefix='/s')
     app.register_blueprint(businesses, url_prefix='/b')
