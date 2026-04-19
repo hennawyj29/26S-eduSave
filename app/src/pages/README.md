@@ -1,7 +1,5 @@
 # `pages` Folder
 
-This folder contains all the pages that will be part of the application. Details on required numbers will be provided in the Phase 3 documentation.
+This Pages Folder contains the pages that are part of the application. They are specified as per user stories. Student_Home.py (26S-eduSave/app/src/pages/00_Student_Home.py) directs the student to their specific page. There are files for Restaurant deals , clothing deals, and my deals (saved deals by the user). Student2_Home.py leads to the home page for the second user. Discount catalog filters discounts by category and amount. Discount map searches discounts as per location, and verify discounts validates the expiration of discounts. Sophia_Home.py leads to the home page for the third user. The files in this include listing analytics (total views, saves for each business' listings), competitor listings (Ability to see competition's analytics), and managing discounts (Can create or update a discount). Jake_Home.py leads to the home page for the fourth user, leading to subpages. Pending discounts has all of the inactive discounts, which need to be approved by Jake. Reports pulls reports and sorts them by priority, allowing Jake to review pending discounts. Platform Metrics has users, pending reports and active discounts, this also has a section to update a business account's status by id using PUT.
 
-These pages are meant to show you an example of some of the features of Streamlit and the way we will limit functionality access by role/persona. It is not meant to represent a complete application.
-
-TODO: Describe the pages folder and include link to documentation. Don't forget about ordering of pages.
+These pages are ordered in sequential order, and we have left gaps in between in order to be able to add pages as they come up to the different homes, otherwise we would need to renumber all the files.
