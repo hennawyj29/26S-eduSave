@@ -36,35 +36,23 @@ def clothing_deals_nav():
 def my_deals_nav():
     st.sidebar.page_link("pages/03_My_Deals.py", label="My Deals", icon="\ud83d\udd16")
 
-# ---- Role: usaid_worker -----------------------------------------------------
 
-def usaid_worker_home_nav():
-    st.sidebar.page_link(
-        "pages/10_USAID_Worker_Home.py", label="USAID Worker Home", icon="\ud83c\udfe0"
+# ---- Role: Student Athlete: Mark -----------------------------------------------------
+
+def student2_home_nav():
+    st.sidebar.page_link("pages/10_Student2_Home.py", label="Student Athlete Home", icon="\ud83c\udfe0"
     )
 
-
-def ngo_directory_nav():
-    st.sidebar.page_link("pages/14_NGO_Directory.py", label="NGO Directory", icon="\ud83d\udcc1")
-
-
-def add_ngo_nav():
-    st.sidebar.page_link("pages/15_Add_NGO.py", label="Add New NGO", icon="\u2795")
-
-
-def prediction_nav():
-    st.sidebar.page_link(
-        "pages/11_Prediction.py", label="Regression Prediction", icon="\ud83d\udcc8"
+def discount_catalog_nav():
+    st.sidebar.page_link("pages/11_Discount_Catalog.py", label="Discount Catalog", icon="\ud83d\udcc1"
     )
 
+def discount_map_nav():
+    st.sidebar.page_link("pages/12_Discount_Map.py", label="Discount Location Map", icon="\u2795"
+    )
 
-def api_test_nav():
-    st.sidebar.page_link("pages/12_API_Test.py", label="Test the API", icon="\ud83d\udedd")
-
-
-def classification_nav():
-    st.sidebar.page_link(
-        "pages/13_Classification.py", label="Classification Demo", icon="\ud83c\udf3a"
+def verify_discs_nav():
+    st.sidebar.page_link("pages/13_Verify_Discs.py", label="Verifying Discounts", icon="\ud83d\udcc8"
     )
 
 
@@ -109,10 +97,10 @@ def platform_metrics_nav():
 # ---- Sidebar assembly -------------------------------------------------------
 
 def SideBarLinks(show_home=False):
-    \"\"\"
+    """
     Renders sidebar navigation links based on the logged-in user's role.
     The role is stored in st.session_state when the user logs in on Home.py.
-    \"\"\"
+    """
 
     # Logo appears at the top of the sidebar on every page
     # Changing the logo to edU Save logo
