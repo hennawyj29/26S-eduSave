@@ -116,10 +116,11 @@ def SideBarLinks(show_home=False):
 
     if st.session_state["authenticated"]:
 
-        if st.session_state["role"] == "pol_strat_advisor":
-            pol_strat_home_nav()
-            world_bank_viz_nav()
-            map_demo_nav()
+        if st.session_state["role"] == "international_student":
+            student_home()
+            restaurant_deals()
+            clothing_deals()
+            my_deals()
 
         if st.session_state["role"] == "student athlete":
             student2_home_nav()
