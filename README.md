@@ -141,7 +141,7 @@ _Note_: This project only contains the infrastructure for a hypothetical ML mode
 ## Created by (Team Members):
 - [Syesha Sen]
 - [Laasya Gattu]
-- [Julienne Conlee]
+- [Julianne Conlee]
 - [Jacy Hennawy]
 - [Vedant Swarup]
 
