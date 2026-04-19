@@ -25,7 +25,7 @@ def student_home_nav():
 
 def restaurant_deal_nav():
     st.sidebar.page_link(
-        "pages/01_Restaurant_Deal.py", label="Restaurant Deals", icon="🍽️"
+        "pages/01_Restaurant_Deals.py", label="Restaurant Deals", icon="🍽️"
     )
 
 
@@ -117,10 +117,10 @@ def SideBarLinks(show_home=False):
     if st.session_state["authenticated"]:
 
         if st.session_state["role"] == "international_student":
-            student_home()
-            restaurant_deals()
-            clothing_deals()
-            my_deals()
+            student_home_nav()
+            restaurant_deal_nav()
+            clothing_deals_nav()
+            my_deals_nav()
 
         if st.session_state["role"] == "student_athlete":
             student2_home_nav()

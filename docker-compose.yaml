@@ -15,6 +15,10 @@ services:
     build: ./api
     container_name: web-api
     hostname: web-api
+    networks:
+      default:
+        aliases:
+          - api
     volumes: ["./api:/apicode"]
     environment:
       - WATCHPACK_POLLING=true
