@@ -61,19 +61,17 @@ def get_listing_analytics():
         # Aggregate views, saves, and redemptions per discount listing for this business
         query = """
             SELECT
-                d.Discount_Id,
+                la.Analytics_Id,
+                la.Disc_Id,
                 d.Disc_Title,
                 d.Disc_Amount,
-                d.Disc_Status,
-                COUNT(DISTINCT dv.View_Id)       AS Total_Views,
-                COUNT(DISTINCT ds.Save_Id)       AS Total_Saves,
-                COUNT(DISTINCT dr.Redemption_Id) AS Total_Redemptions
-            FROM Discount d
-            LEFT JOIN Discount_View       dv ON d.Discount_Id = dv.Discount_Id
-            LEFT JOIN Discount_Save       ds ON d.Discount_Id = ds.Discount_Id
-            LEFT JOIN Discount_Redemption dr ON d.Discount_Id = dr.Discount_Id
+                la.View_Count,
+                la.Save_Count,
+                la.Redemption_Count
+            FROM Listing_Analytics la
+            JOIN Discount d ON la.Disc_Id = d.Discount_Id
             WHERE d.Biz_Id = %s
-            GROUP BY d.Discount_Id, d.Disc_Title, d.Disc_Amount, d.Disc_Status
+            GROUP BY la.Analytics_Id, la.Disc_Id, d.Disc_Title, d.Disc_Amount
         """
         cursor.execute(query, (biz_id,))
         results = cursor.fetchall()
@@ -148,7 +146,7 @@ def get_competitor_listings():
             SELECT
                 b.Biz_Id,
                 b.Biz_Name,
-                b.Biz_Location,
+                b.Address,
                 d.Discount_Id,
                 d.Disc_Title,
                 d.Disc_Amount,
@@ -156,7 +154,7 @@ def get_competitor_listings():
                 d.Created_At
             FROM Discount d
             JOIN Business b ON d.Biz_Id = b.Biz_Id
-            WHERE d.Disc_Status = 'Active'
+            WHERE d.Disc_Status = 1
               AND d.Biz_Id != %s
               AND d.Category_Id IN (
                   SELECT DISTINCT Category_Id
