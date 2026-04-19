@@ -49,7 +49,7 @@ if st.button("Act as Benito Fernandez, an International College Student",
              type='primary',
              use_container_width=True):
     st.session_state['authenticated'] = True
-    st.session_state['role'] = 'student'
+    st.session_state['role'] = 'international_student'
     st.session_state['first_name'] = 'Benito'
     logger.info("Logging in as Student Persona")
     st.switch_page('pages/00_Student_Home.py')
@@ -59,7 +59,7 @@ if st.button("Act as Mark Smith, a Deal-Seeking College Student Athlete",
              type='primary',
              use_container_width=True):
     st.session_state['authenticated'] = True
-    st.session_state['role'] = 'deal_seeker'
+    st.session_state['role'] = 'student_athlete'
     st.session_state['first_name'] = 'Mark'
     logger.info("Logging in as Deal Seeker Persona")
     st.switch_page('pages/10_Student2_Home.py')

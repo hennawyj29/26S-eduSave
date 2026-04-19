@@ -122,7 +122,7 @@ def SideBarLinks(show_home=False):
             clothing_deals()
             my_deals()
 
-        if st.session_state["role"] == "student athlete":
+        if st.session_state["role"] == "student_athlete":
             student2_home_nav()
             discount_catalog_nav()
             discount_map_nav()
